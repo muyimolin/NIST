@@ -1,0 +1,90 @@
+\pagebreak
+
+\begin{center}
+	{\Large \bf Measurement of Human-robot Coolaborative Performance in Teleoperated Complex Motion Coordination}\\
+    \vspace{4pt}
+% 	\renewcommand{\baselinestretch}{1}
+   	{\large PI: Zhi Li (Worcester Polytechnic Institute)}
+   	% \vspace{4pt}
+    % {\large Worcester Polytechnic Institute}
+\end{center}
+
+\vspace{1 em}
+
+% \paragraph*{\Large Project Summary} 
+This project aims to develop novel and systematic metrics to measure the collaborative performance of human and robot in teleoperation, and to quantitatively compare the usability of various human-robot control interfaces in complex motion coordination. Examples of such complex motion coordination include (1) the hand-arm coordination, bimanual coordination and loco-manipulation of tele-nursing robot, (2) the coordination of multi-arm and macro-micro structure of surgical robotic system, and (3) the coordination of heterogeneous robot swarm in collaborative transportation and manipulation. 
+
+Planning and control of motion coordination of a complex robotic system in cluttered human environment requires human-level manipulation dexterity and decision-making intelligence and thus far can only be reliably achieved under direct teleoperation. The performance of human-robot teleoperation system depends primarily on the teleoperator's expertise, which reflects how well the teleoperators can utilize the motion and perception capabilities of their remote robot surrogate given the motion/perception mapping defined by the teleoperation interface. Studies on teleoperation interface design have proposed methods that facilitate intuitive motion mapping, and reduce perception/control workload and discomfort. However, little research has been conducted to measure and compare the coordinated motions teleoperated through various interface by the quality of low-level motor skills and high-level decision-making. Performance metrics haven been developed for human and robot independently without considering their task-dependent and time-varying synergy. Thus, through this project we aim to develop and validate metrics for measuring the adaption level of human motor control and decision-making strategy to a teleoperated robotic system in complex motion coordination.  
+
+% adapt human motion coordination strategies to their remote robot surrogates.
+
+To meet this need, we propose to learn from novice- and expert-demonstration of the motion coordination, compare the demonstrations by their low-level motion primitive models and high-level motion plan model, to learn the features for measure the performance of human-robot teleoperation system. The demonstrations are collected from a mobile humanoid robot controlled through various teleoperation interfaces. Standard human and robot performance metrics are used to evaluate meta performance of human-robot teleoperation system, and quantify the skill levels of novices and experts. Dynamic movement primitives (DMP) and Gaussian Mixture Model/Gaussian Mixture Regression (GMM/GMR) are used to model the motion coordination within robotic system, while Probabilistic Movement Primitives (Pro-MP) is used to model the motion coordination between robotic system and environment. Novel metrics for the regularity, variability, complexity of the motion primitives are proposed as the features to characterize the low-level motor skills. Machine learning methods are used to identify the principle components and characteristic synergy in the motion primitive feature space, to compare low-level motor skills across tasks, teleoperation interfaces, and users. To model the high-level task plan, we abstract the critical robot states in motion coordination  and motion primitives for state transition to symbols, and use these symbols to construct an abstract task space graph. The costs of graph nodes and edges, which denote the abstract states and state-transition motion primitives, are assigned by weighting the teleoperator's operation efforts, efficiency, frequency and success ratio. Given the abstract motion coordination representation, we propose several optimization criteria, derived from several hypotheses of the human motion coordination strategies, and compose a reward function with unknown weighting coefficients. The weighting assignment learned from demonstrated high-level task plan can be used for evaluate and compare a teleoperator's motion coordination control strategies. 
+
+Our proposed methods can be generalized to evaluate the teleoperated motion coordination for various complex robotic systems. Previous research at WPI human-inspired robotics lab has integrated a mobile humanoid robots which supports teleoperation from multi-modal interfaces. The proposed model user study, model development and data analysis can be accomplished in one year. Future work may include (1) extending the proposed project to evaluate the motion coordination of the multi-arm surgical robot (platform available at WPI AIM lab) and swarm robot system (available at WPI NEST lab), as well as available industrial robot platform at research lab at NIST; and (2) using the developed evaluation metrics to study the motor skill progression from novice to expert; and (3) shift the control between human teleoperator and intelligent tele-operated robot based on learning of high-level motion coordination strategies and low-level coordinated motion primitives from human teleoperators. 
+
+
+
+
+
+% Take the teleoperation of mobile humanoid nursing robot for instance: the motion coordination involved in patient-caring tasks includes , and may extend to the coordination of end-effectors for sensing and action. 
+
+% skill acquisition efforts of novice worker to  
+
+% Tele-operated robotic systems extend the physical capabilities of medical and industrial workers to perform  tasks in remote, inaccessible, and/or hazardous environments. 
+
+% tasks that require human-level manipulation dexterity and decision-making intelligence are infeasible through autonomous control, yet can be accomplished under direct (tele)operation. To freely and efficiently control their remote surrogates, human workers need to devote significant efforts to learn the motion and perception mapping defined by the (tele)operation interface. To address this needs, we propose to investigate the physical and cognitive interactions between human workers and (tele)operation interfaces, and develop a user interface to support intuitive robot control and multi-modality cognitive augmentation. Our proposed project aims to (a) reduce the teleoperation control effort in dexterous and coordinated manipulation tasks, and to (b) facilitate novice workers to acquire the fine motor skills for operating complicate robotic systems to work on various manufacturing tasks. To this end, we propose to investigate theories and technologies that (1) Shift the boundary between direct teleoperation and autonomous control based on the physical and mental status of the operator, (2) Infer human teleoperator's contextual intent based on the knowledge of manipulation tasks and human motions, in order to automate low-level robot actions. 
+
+% \vspace{0.5 em}
+
+% \paragraph*{\Large Intellectual Merit}
+% This project addresses how multi-modality cognitive feedback affects human motor behavior and motor learning process. Specifically, we will experimentally study in teleoperated manipulation tasks that requires simultaneous control of multiple robot components, such as loco-manipulation, bimanual coordination, arm-hand-finger coordination. For \textbf{expert workers}, we focuses on \textit{how human decision-making and task operation can be affected by single- and multi-modality cognitive feedback, and investigate methods for intuitive and integrated representation of task information and cognitive feedback}. For \textbf{novice workers}, we will focus on \textit{how multi-modality cognitive feedback affects the explicit and implicit learning of dexterous and coordinated manipulation motor skills}, as well as \textit{when and how to provide high-level/abstract cognitive feedback (e.g., verbal/text instructions, numbers, etc.) and low-level intuitive cognitive feedback (e.g., colors, shapes, sounds, tactile and forces, etc.) to facilitate the interactive and associated explicit and implicit motor learning}. Our proposed research is unique for it will develop a unified framework that integrate the model-based and model-less robot learning methodologies to reveal the underlying principles of the associated implicit and explicit human motor learning processes. The enhanced understanding of the cognitive and physical interactions between human worker and teleoperation interfaces further leads to novel techniques for user-adaptive cognitive augmentation and decision-making assistance, which leverages ``cloud wisdom'' and adjust the human-robot control efforts based on a human worker's intents, physical/mental states, and skill level. 
+
+% % to robot learning that acquire motion and task knowledge through  (e.g., reinforcement learning with explicit reward function v.s. learning through convolutional neural network). Inspired by how human can develop situational awareness and motor skills through intuitive and abstract cognitive feedback and augmentation, we will further develop novel robot teaching methodologies for that leverage human-guided robot interactions with environments and demonstrations/critiques from human teachers. 
+
+
+% % By investigating the underlying principles of the cognitive and physical interaction between the human worker and teleoperation interfaces, we will advance the technologies for user-adaptive cognitive augmentation to facilitate novice workers to build their situational awareness and master the motion mapping between the input interfaces and their physical embodiments in the tasks. Towards the seamless integration of human and (tele-)operated robotic systems, our research will further investigate shared-autonomous control methods for adjusting the human-robot control efforts based on human worker's skill level and physical/mental states. 
+
+% % We will also investigate how to utilize the teleoperation interface as an efficient robot teaching interface, to relieve workers from repetitive low-level teleoperation. 
+
+
+% % Towards the seamless integration of human and (tele-)operated robotic systems, we will further investigate shared-autonomous control methods for adjusting the human-robot control efforts based on human worker's skill level and physical/mental states. We will also investigate how to utilize the teleoperation interface as an efficient robot teaching interface, to relieve workers from repetitive low-level teleoperation. 
+
+% % This project aims to discover the new knowledge of how multi-modality cognitive feedback affects explicit and implicit learning processes of coordinated manipulation motor skills, and develop novel methodologies for 
+
+% % how this knowledge can be used to (1) 
+
+% % develop robot control interface that integrates intuitive and abstract multi-modality  to provide user-adaptive   
+
+% % Specifically, we will experimentally study in teleoperated manipulation tasks, how human decision-making and task operation can be affected by single- and multi-modality cognitive feedback, and investigate methods for intuitive and integrated representation of task information and cognitive feedback, to reduce an expert worker's the physical and mental efforts. For novice workers, we will focus on how multi-modality cognitive feedback affects the explicit and implicit learning of dexterous and coordinated manipulation motor skills, as well as when and how to provide high-level/abstract cognitive feedback (e.g., verbal/text instructions, numbers, etc.) and low-level intuitive cognitive feedback (e.g., colors, shapes, sounds, tactile and forces, etc.) to facilitate the interactive and associated explicit and implicit motro learning. By investigating the underlying principles of the interaction between the human worker and teleoperation interfaces, we will develop user-adaptive cognitive augmentation to facilitate novice workers to build their situational awareness and master the motion mapping between the input interfaces and their physical embodiments in the tasks. Towards the seamless integration of human and (tele-)operated robotic systems, we will further investigate shared-autonomous control methods for adjusting the human-robot control efforts based on human worker's skill level and physical/mental states. We will also investigate how to utilize the teleoperation interface as an efficient robot teaching interface, to relieve workers from repetitive low-level teleoperation. 
+
+
+
+% \vspace{0.5 em}
+
+% \paragraph*{\Large Broader Impacts}
+% Our research will directly and primarily benefit industrial workers that operate tele-manufacturing robotic system, and will have boarder impacts on a wide range of workers that need to master the skill of operating complex human-machine interfaces for direct control and robot teaching, such as tele-surgery, tele-nursing, and shared-autonomous driving. By improving the usability of teleoperation interface, we aim to improve the availability of healthcare, industrial, and social service labor, and provide capable surrogates for military and medical personnels in tedious, repetitive, and dangerous tasks. It will also lead towards affordable robotic solutions can provide assistance and job opportunities to wider populations. Our research will also synergize with graduate and undergraduate education for students from engineering, medical, and nursing schools. It will also actively engage K-12 students, REU students in summer research and the general public in open lab activities. 
+
+% Through robot-mediated interactions, develops robot motion intelligence in a multi-agent, highly-interactive context. 
+
+
+
+% to navigate in cluttered human environments and perform a wide variety of dexterous manipulation tasks with minimal human control. Our key idea is to develop a unified framework for lifelong learning and fast, context-based intent and in simultaneous multi-lateral physical human-robot interactions. In such scenarios, the nursing robot participates in a patient-caring task, while learning when and how to intervene in the robot-mediated collaboration between its remote teleoperator and on-site human partners. By observing human experts, the nursing robot will also establish hierarchical knowledge of natural coordinated human motions and human-human interactions, and metrics for evaluating task performance and motion capabilities. Such motion knowledge and metrics will be used to evaluate the level of skills of novice teleoperators, patients and partner nurses, and adjust the level of assistance provided to maintain nursing task performance and fluency of human-robot collaboration. 
+
+  
+% \vspace{0.5 em}
+
+% \paragraph*{\Large Intellectual Merit}
+% Our proposal aims to address the need for \textit{\textbf{customizable robot motion intelligence}}, and to \textit{\textbf{lower the barriers}} for medical personnel to synergize with tele-robotic technologies. Our proposed framework enables a tele-robotic system to develop and evolve its contextual motion intelligence through lifelong interactions with human experts, and apply its motion intelligence to provide user-adaptive assistance to reduce learning and operation effort for novice teleoperators.   
+
+
+
+% \vspace{0.5 em}
+
+% \paragraph*{\Large Broader Impacts}
+% This project envisions broader impacts on a wide range of mobile humanoid robots for medical, industrial, and social service tasks. Our research efforts will enable these robots to interact simultaneously and physically with both the teleoperator and end users, and reconcile their intents to achieve natural, fluent, and intimate collaboration.
+% % PM: I changed this to singular "barrier" to make the claim a bit less grand? Feel free to change back if desired.
+% We aim to remove a major barrier that prevents robots from integrating into human society as capable and socially acceptable peers. By improving the usability of dexterous robotic manipulators under direct teleoperation and shared-autonomous control, this project may also lead to improved availability of healthcare, industrial, and social service labor, and provide surrogates for military and medical personnel for tedious, repetitive, and dangerous tasks. It will lead towards affordable robotic solutions for hospital and home care that can provide long-term assistance to aging and disabled populations. Our research will also synergize with graduate and undergraduate education for students from engineering, medical, and nursing schools, and will actively engage K-12 students and the general public. 
+
+% \vspace{2 em}
+% \noindent
+% \textbf{Keywords} --- Customizability, Lowering Barriers, Learning, Human-Robot Interaction, Medical

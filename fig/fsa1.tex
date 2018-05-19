@@ -1,0 +1,8 @@
+
+\begin{tikzpicture}[shorten >=1pt,node distance=2cm,on grid,auto] 
+   \node[state, initial] (0)   {$0$}; 
+   \node[state] (1) [right =of 0] {$1$};
+\path[->] 
+    (0) edge node{$P$} (1)
+    (1) edge [bend left] node{$H$} (0);
+\end{tikzpicture}

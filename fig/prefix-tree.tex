@@ -1,0 +1,18 @@
+\begin{tikzpicture}[shorten >=1pt,node distance=2cm,on grid,auto] 
+   \node[state, initial] (0)   {$0$}; 
+   \node[state] (1) [right =of 0] {$1$};
+   \node[state] (2) [right =of 1, accepting] {$2$};
+   \node[state] (3) [below  right =of 0] {$3$};
+   \node[state] (4) [right =of 3] {$4$};
+   \node[state] (5) [right =of 4] {$5$};
+   \node[state] (6) [right =of 5] {$6$};
+   \node[state] (7) [right =of 6, accepting] {$7$};
+\path[->] 
+    (0) edge node{$P$} (1)
+    (1) edge node{$H$} (2)
+    (0) edge node{$M$} (3)
+    (3) edge node{$P$} (4)
+    (4) edge node{$C$} (5)
+    (5) edge node{$P$} (6)
+    (6) edge node{$H$} (7);
+\end{tikzpicture}

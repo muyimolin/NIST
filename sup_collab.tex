@@ -1,0 +1,93 @@
+\pagebreak
+
+\begin{center}
+	{\Large \bf Supplementary Documents --- Collaboration Plan}\\
+%     \vspace{4pt}
+% 	\renewcommand{\baselinestretch}{1}
+%    	{\large PI: Zhi Li (Worcester Polytechnic Institute)\\
+%     Co-PI: Brian Ziebart (University of Illinois at Chicago), Jie Fu (Worcester Polytechnic Institute)}
+   	% \vspace{4pt}
+    % {\large Worcester Polytechnic Institute}
+\end{center}
+
+\vspace{0.5em}
+
+% an old template 
+
+
+
+\noindent
+{\bf Personnel:} 
+This project will be carried out by the PIs and three Ph.D. students at WPI and UIC. 
+
+\bigskip 
+
+\noindent
+{\bf Coordination:}
+The project teams will meet weekly via video conference (e.g., Skype) and meet in person semi-annually to coordinate research efforts. They will set up a project management system using Slack (or similar) to facilitate offline communication and collaboration among the team members.
+
+\bigskip
+
+\noindent
+{\bf Shared Code Repositories and Common Robot Infrastructure:}
+A simulation of the TRINA system is currently available so that algorithm development and implementation can be conducted in parallel at WPI and UIC. The team members will share software developed through ROS packages and the TRINA software stack. The system evaluation will primarily be conducted at WPI with the full TRINA system, while the UIC laboratory will work on a partial demonstration using its Baxter robot from ReThink Robotics. Evaluation of intent prediction algorithms can be performed both with TRINA systems or other human-robot or human-human collaborative tasks.  The experimental validation will involve undergraduate students through summer internships or senior design projects. 
+
+\bigskip
+
+\noindent
+{\bf Schedule of Research Efforts:}
+The anticipated schedule for the major tasks is shown in~\fig{fig:timeline} (Blue marks are milestones for Task 1 and 2, respectively).
+
+%\vspace{-2ex}
+%\begin{wrapfigure}{r}{0.45\textwidth}
+\begin{figure}[h]
+\begin{center}
+\noindent\resizebox{0.7\textwidth}{!}{
+\begin{tikzpicture}[x=.5cm, y=0cm]
+\begin{ganttchart}[y unit title=0.5cm,
+y unit chart=0.5cm, vgrid, title/.style={fill=black!60, draw=none},
+title label font=\color{white}\bfseries \small,
+hgrid, % title label font = \small, title height=.8,
+bar label font=\small, 
+bar label node/.append style=%
+{align=left},
+milestone height = 0.15mm,
+milestone/.append style={fill=blue!80}, 
+%  milestone label node/.append style={anchor=south}, 
+milestone label font = \small\bfseries,
+group label font =\small\bfseries\color{blue}, bar height=.4, bar
+group/.append style={draw=black, fill=blue!20},]{1}{12}
+\gantttitle{Year-1}{4} \gantttitle{Year-2}{4}\gantttitle{Year-3}{4} \\
+\ganttgroup[name=task1]{Task 1}{1}{6}\\
+\ganttbar[name=data]{Data collection and segmentation (1.0)}{1}{8}\\
+\ganttbar[name=dmpLearn]{Learning coordinated and interactive motion primitives (1.1)}{1}{4}\\
+\ganttbar[name=taskLearn]{Learning task constraints and dependency (1.2)}{3}{6}\\
+\ganttbar[name=adaptation]{Personalized adaptation of motor skills (1.3)}{4}{6}
+\ganttmilestone{}{6} \\
+\ganttgroup{Task 2}{1}{8}\\
+\ganttbar[name=irlGame]{Inference of shared intent (2.1)}{1}{3}\\
+\ganttbar[name=intentDetect]{Task step recognition from partial motion (2.2)}{3}{4}\\
+\ganttbar[name=coordination]{Autonomous coordination of navigation and manipulation (2.3)}{5}{6}\\
+\ganttbar[name=motionPredict]{Active intent detection in user assistance modules (2.4)}{6}{8}
+% \ganttmilestone{Milestone: Task 2}{8} \\
+\ganttmilestone{}{8} \\
+\ganttgroup{Task 3}{4}{12}\\
+\ganttbar[name=experiment]{Evaluation of intent and motion prediction (3.1)}{4}{12}\\
+\ganttbar[name=nav]{Developing assistive modules in TRINA (3.2)}{6}{8}\\
+\ganttbar[name=manipulation]{System integration and evaluation (3.2)}{6}{10}\\
+\ganttbar[name=userStudy]{User study (3.1,3.2)}{4}{12}
+% \ganttlink{intentDetect}{nav}
+% \ganttlink{taskLearn}{nav}
+% \ganttlink{dmpLearn}{manipulation}\
+% \ganttlink{irlGame}{manipulation}
+% \ganttlink{intentDetect}{manipulation}
+ \end{ganttchart}
+ \end{tikzpicture}
+ }
+ \end{center} %\vspace{-4ex}
+\caption{\small Project Timeline. \label{fig:timeline}}
+\end{figure} 
+\vspace{2ex}
+
+\noindent
+PI Li will lead the research efforts for Tasks (1.0),(1.1) (1.3) (2.3) and (2.4). PI Ziebart will lead the research efforts for Tasks (2.2); PI  Fu will lead the research efforts for Tasks (1.2) and (2.1). Li and Fu will collaborate to construct consistent high-level task decompositions and low-level dynamic movement primitives from human demonstrations. Fu and Ziebart will collaborate on shared intent inference with the game-theoretic formulation and develop theory and algorithms for online active intent detection. Li and Ziebart will collaborate on Task (2.3) and (2.4). Li will lead the research efforts for Task 3, and collaborate with Ziebart and Fu on implementation and user study.

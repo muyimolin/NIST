@@ -1,0 +1,16 @@
+
+\begin{tikzpicture}[shorten >=1pt,node distance=2cm,on grid,auto] 
+   \node[state, initial] (0)   {$0$}; 
+   \node[state] (1) [right =of 0] {$1$};
+   \node[state] (2) [right =of 1, accepting] {$2$};
+   \node[state] (3) [below  right =of 0, fill=blue!20] {$3,5$};
+   \node[state] (4) [right =of 3,  fill=blue!20] {$4,6$};
+   \node[state] (7) [right =of 4, accepting] {$7$};
+\path[->] 
+    (0) edge node{$P$} (1)
+    (1) edge node{$H$} (2)
+    (0) edge node{$M$} (3)
+    (3) edge [line width=2pt] node{$P$} (4)
+    (4) edge [bend left, line width=2pt] node{$C$} (3)
+    (4) edge node{$H$} (7);
+\end{tikzpicture}
